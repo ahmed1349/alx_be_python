@@ -18,13 +18,13 @@ def main():
         
         if choice == '1':
             # Add an item to the shopping list
-            item = input("Enter the item you want to add: ")
+            item = input("Enter the item to add:")
             shopping_list.append(item)
             print(f"'{item}' has been added to the shopping list.")
         
         elif choice == '2':
             # Remove an item from the shopping list
-            item = input("Enter the item you want to remove: ")
+            item = input("Enter the item to remove: ")
             if item in shopping_list:
                 shopping_list.remove(item)
                 print(f"'{item}' has been removed from the shopping list.")
