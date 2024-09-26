@@ -6,7 +6,7 @@ def display_menu():
     print("4. Exit")
 
 def main():
-    # Initialize an empty shopping list
+    # Initialize an empty shopping lis
     shopping_list = []
     
     while True:
