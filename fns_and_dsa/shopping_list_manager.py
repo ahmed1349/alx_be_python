@@ -6,33 +6,37 @@ def display_menu():
     print("4. Exit")
 
 def main():
+    # Initialize an empty shopping list
     shopping_list = []
     
     while True:
+        # Display the menu options
         display_menu()
+        
+        # Get user input for the choice
         choice = input("Enter your choice: ")
-
+        
         if choice == '1':
             # Add an item to the shopping list
             item = input("Enter the item you want to add: ")
             shopping_list.append(item)
-            print("'" + item + "' has been added to the shopping list.")
+            print(f"'{item}' has been added to the shopping list.")
         
         elif choice == '2':
             # Remove an item from the shopping list
             item = input("Enter the item you want to remove: ")
             if item in shopping_list:
                 shopping_list.remove(item)
-                print("'" + item + "' has been removed from the shopping list.")
+                print(f"'{item}' has been removed from the shopping list.")
             else:
-                print("'" + item + "' not found in the shopping list.")
+                print(f"'{item}' not found in the shopping list.")
 
         elif choice == '3':
-            # View the shopping list
+            # Display the shopping list
             if shopping_list:
                 print("\nCurrent Shopping List:")
                 for i, item in enumerate(shopping_list, start=1):
-                    print(str(i) + ". " + item)
+                    print(f"{i}. {item}")
             else:
                 print("\nThe shopping list is currently empty.")
 
