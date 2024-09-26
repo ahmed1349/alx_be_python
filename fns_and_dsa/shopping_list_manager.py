@@ -41,7 +41,7 @@ def main():
                 print("\nThe shopping list is currently empty.")
 
         elif choice == '4':
-            # Exit the program
+
             print("Goodbye!")
             break
 
