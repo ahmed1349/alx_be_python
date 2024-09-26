@@ -12,7 +12,7 @@ def convert_to_fahrenheit(celsius):
 
 def main():
     try:
-        # Prompt the user for the tempe
+        # Prompt the user for the tem
         temp_input = input("Enter the temperature to convert: ")
 
         # Ensure that the input is numeric
