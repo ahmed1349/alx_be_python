@@ -33,7 +33,6 @@ def main():
         account.display_balance()
     
     else:
-        # If the command is invalid
         print("Invalid command. Available commands: deposit, withdraw, display.")
 
 if __name__ == "__main__":
