@@ -6,7 +6,6 @@ def safe_divide(numerator, denominator):
         num = float(numerator)
         denom = float(denominator)
 
-        # Attempt the division
         result = num / denom
         return f"The result of the division is {result}"
 
