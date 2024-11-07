@@ -8,20 +8,20 @@ class Book:
 
     def __str__(self):
         """Return a string representation of the book."""
-        return f"'{self.title}' by {self.author}"
+        return f"Book: {self.title} by {self.author}"
 
 
 class EBook(Book):
-    """Derived class representing an e-book with a file size."""
+    """Derived class representing an e-book with a file size in KB."""
 
-    def __init__(self, title, author, file_size):
-        """Initialize the e-book with title, author, and file size."""
+    def __init__(self, title, author, file_size_kb):
+        """Initialize the e-book with title, author, and file size in KB."""
         super().__init__(title, author)
-        self.file_size = file_size  # File size in MB
+        self.file_size_kb = file_size_kb  # File size in KB
 
     def __str__(self):
-        """Return a string representation of the e-book, including file size."""
-        return f"{super().__str__()} (EBook, {self.file_size}MB)"
+        """Return a string representation of the e-book, including file size in KB."""
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size_kb}KB"
 
 
 class PrintBook(Book):
@@ -34,7 +34,7 @@ class PrintBook(Book):
 
     def __str__(self):
         """Return a string representation of the print book, including page count."""
-        return f"{super().__str__()} (PrintBook, {self.page_count} pages)"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
@@ -47,6 +47,7 @@ class Library:
     def add_book(self, book):
         """Add a book (Book, EBook, or PrintBook) to the library."""
         self.books.append(book)
+
     def list_books(self):
         """List all books in the library with their details."""
         if not self.books:
