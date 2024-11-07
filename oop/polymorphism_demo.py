@@ -8,6 +8,5 @@ def main():
 
     for shape in shapes:
         print(f"The area of the {shape.__class__.__name__} is: {shape.area()}")
-
 if __name__ == "__main__":
     main()
